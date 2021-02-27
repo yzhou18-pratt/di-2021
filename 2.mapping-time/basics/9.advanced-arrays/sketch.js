@@ -21,7 +21,7 @@ function setup() {
 
   for (var i=0; i<width; i+=spacing){
     /* use the 0–1 `coswave` value for this x location to pick a grey value in the 0–255 range */
-    stroke(coswave[i]*255);           // 0=black, 1=white
+     stroke(coswave[i]*255);           // 0=black, 1=white
     // stroke(255 - coswave[i]*255);  // 0=white, 1=black
     // stroke(coswave[i] * 255/2);    // 0=black, 1=grey
 

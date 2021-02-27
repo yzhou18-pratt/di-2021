@@ -22,3 +22,7 @@ Version 3: Line Clock
 
 * Number of lines in each section = time on the clock representing 00:00:00
 * Black lines = number
+
+* Each second, draw line. 60 in total. 
+* Add spacing to y-axis, with initial color (grey).
+* Each i lesser than nowsec, color (black).
