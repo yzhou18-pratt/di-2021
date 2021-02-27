@@ -13,7 +13,7 @@ function setup() {
 function draw() {
   // check the clock for the current time and unpack some of its fields to generate a time-string
   var now = clock()
-  background('white')
+  background(255)
 
   // set up typography & drawing-color
   textFont("Nunito") // ← check index.html to see how it was loaded from google-fonts
@@ -24,14 +24,12 @@ function draw() {
   text(now.text.date, 30, 400)
   text(now.text.time, 30, 450)
 
-
-  // var box = 40
   var radius = 10
-  var x = 10
+  var x = 15
 
   push()
 
-  translate(50, 100)
+  translate(20, 50)
   for (var i = 1; i <= 2; i++) {
     for (var j = 1; j <= 30; j++) {
       

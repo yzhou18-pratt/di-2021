@@ -10,6 +10,7 @@ function setup() {
   createCanvas(500, 500);
   angleMode(DEGREES);
   colorMode(RGB);
+  strokeJoin(ROUND);
 
   var radius = min(width, height) / 2; // this is the maximum possible radius
   secondsRadius = radius * 1.25
@@ -30,60 +31,32 @@ function draw() {
   // var m = (now.progress.min * TWO_PI) - HALF_PI
   // var h = (now.progress.halfday * TWO_PI) - HALF_PI
 
-  background(255)
+  background(20)
 
-  let hfrom = color(230, 231, 233)
-  let hto = color(19, 46, 82)
-  var h2 = lerpColor(hfrom, hto, 0.09)
-  var h3 = lerpColor(hfrom, hto, 0.18)
-  var h4 = lerpColor(hfrom, hto, 0.27)
-  var h5 = lerpColor(hfrom, hto, 0.36)
-  var h6 = lerpColor(hfrom, hto, 0.45)
-  var h7 = lerpColor(hfrom, hto, 0.54)
-  var h8 = lerpColor(hfrom, hto, 0.63)
-  var h9 = lerpColor(hfrom, hto, 0.72)
-  var h10 = lerpColor(hfrom, hto, 0.81)
-  var h11 = lerpColor(hfrom, hto, 0.9)
-  fill(hfrom)
-  arc(cx, cy, hoursRadius, hoursRadius, 0, 30)
-  fill(h2)
-  arc(cx, cy, hoursRadius, hoursRadius, 30, 60)
-  fill(h3)
-  arc(cx, cy, hoursRadius, hoursRadius, 60, 90)
-  fill(h4)
-  arc(cx, cy, hoursRadius, hoursRadius, 90, 120)
-  fill(h5)
-  arc(cx, cy, hoursRadius, hoursRadius, 120, 150)
-  fill(h6)
-  arc(cx, cy, hoursRadius, hoursRadius, 150, 180)
-  fill(h7)
-  arc(cx, cy, hoursRadius, hoursRadius, 180, 210)
-  fill(h8)
-  arc(cx, cy, hoursRadius, hoursRadius, 210, 240)
-  fill(h9)
-  arc(cx, cy, hoursRadius, hoursRadius, 240, 270)
-  fill(h10)
-  arc(cx, cy, hoursRadius, hoursRadius, 270, 300)
-  fill(h11)
-  arc(cx, cy, hoursRadius, hoursRadius, 300, 330)
-  fill(hto)
-  arc(cx, cy, hoursRadius, hoursRadius, 330, 0)
+  let sfrom = color(255, 67, 67) //red
+  let sto = color(255, 146, 146)
+  let mfrom = color(255, 245, 54) //yellow
+  let mto = color(237, 228, 112)
+  let hfrom = color(57, 57, 255) //blue
+  let hto = color(113, 113, 255)
 
-
-  fill (240)
+  push()
+  fill (lerpColor(hfrom, hto, now.progress.hour))
+  noStroke()
   let end1 = map(now.hours, 0, 12, 0, 360)
-  arc(cx, cy, hoursRadius, hoursRadius, 0, end1)
+  arc(cx, cy, hoursRadius, hoursRadius, 0, end1, PIE)
 
 
-  fill(150)
+  fill(lerpColor(mfrom, mto, now.progress.min))
   noStroke()
   let end2 = map(now.min, 0, 60, 0, 360)
-  arc(cx, cy, minutesRadius, minutesRadius, 0, end2)
+  arc(cx, cy, minutesRadius, minutesRadius, 0, end2, PIE)
 
-  fill(200)
+  fill (lerpColor(sfrom, sto, now.progress.sec))
   noStroke()
   let end3 = map(now.sec, 0, 60, 0, 360)
-  arc(cx, cy, secondsRadius,secondsRadius, 0, end3)
+  arc(cx, cy, secondsRadius,secondsRadius, 0, end3, PIE)
+
 
  // Draw the second hand (thin & orange)
   // stroke('orange')
