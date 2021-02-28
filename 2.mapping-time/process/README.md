@@ -2,27 +2,18 @@
 
 Description of the contents of this folder and the logic of your data → retinal variables mapping.
 
-Version 1: Dotted Clock
+# Wall Clock 1: Text
 
-* 3x3 squares with 9 dots each, representing a number in sequence
-	1 2 3
-	4 5 6
-	7 8 9
-
-* White dot = number. When not represented, the dot will be dark/black.
+A grid of numbers while the highlighted colors show the current hour, minute and second.
 
 
-Version 2: Gradient Clock
+# Wall Clock 2: Jumping Colors
 
-* Each layered circle represent hour, minute, second.
-* May change the circle into a smooth gradient than being sliced into 12 parts
+Each layer of circle represents hour, minute and second respectively.
+With each second or movement, the circle blinks accordingly (changes color and back).
 
 
-Version 3: Line Clock
+# Wall Clock 3: Lines
 
-* Number of lines in each section = time on the clock representing 00:00:00
-* Black lines = number
-
-* Each second, draw line. 60 in total. 
-* Add spacing to y-axis, with initial color (grey).
-* Each i lesser than nowsec, color (black).
+The number of lines in each column represents the clock.
+Black lines represent the current number on the clock.
