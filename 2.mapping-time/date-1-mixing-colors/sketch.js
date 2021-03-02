@@ -20,9 +20,9 @@ function draw() {
   noStroke()
   let month = map(now.progress.month, 0, 1, 0, 500)
   rect (0, 500, 500, -(month))
-  fill(50, 50, 50, 75)
+  fill(50, 50, 50, 100)
   textAlign(LEFT)
-  text('% month', 20, 520-(month))
+  text(now.text.month, 20, 515-(month))
   pop()
 
   // week progress bar
@@ -31,9 +31,9 @@ function draw() {
   noStroke()
   let week = map(now.progress.week, 0, 1, 0, 500)
   rect(0, 0, 500, week)
-  fill (50, 50, 50, 75)
-  textAlign(LEFT)
-  text('% week', 435, week-7)
+  fill (50, 50, 50, 100)
+  textAlign(RIGHT)
+  text(now.text.weekday, 480, week-7)
   pop()
 
 
@@ -43,9 +43,9 @@ function draw() {
   noStroke()
   let day = map(now.progress.day, 0, 1, 0, 500)
   rect(0, 0, day, 500)
-  fill (50, 50, 50, 75)
+  fill (50, 50, 50, 100)
   textAlign(RIGHT)
-  text('% day', day-7, 475)
+  text(now.text.day, day-7, 480)
   pop()
 
   // push()

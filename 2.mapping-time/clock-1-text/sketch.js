@@ -32,7 +32,7 @@ function draw() {
     for (var j = 1; j <= 10; j++) {
       
       timer = (i - 1) * 10 + j
-      if (timer == hour()) {
+      if (timer == now.hours) {
         fill(242, 146, 29)
       } else {
         fill(28, 43, 89)
@@ -50,7 +50,7 @@ function draw() {
     for (var j = 1; j <= 10; j++) {
       
       timer = (i - 1) * 10 + j
-      if (timer == minute()) {
+      if (timer == now.min) {
         fill(3, 120, 166)
       } else {
         fill(28, 43, 89, 0)
@@ -68,7 +68,7 @@ function draw() {
     for (var j = 1; j <= 10; j++) {
       
       timer = (i - 1) * 10 + j
-      if (timer == second()) {
+      if (timer == now.sec) {
         fill(119, 179, 217)
       } else {
         fill(28, 43, 89, 0)
