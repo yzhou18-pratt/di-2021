@@ -21,7 +21,7 @@ function draw() {
 
   push()
   translate(30, 30)
-  stroke(0)
+  stroke(30)
   strokeWeight(2)
   strokeJoin(ROUND)
   let year = map(now.progress.year, 0, 1, 0, 430)
